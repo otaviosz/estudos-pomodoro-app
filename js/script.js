@@ -16,3 +16,21 @@ let progressInterval; // variavel que guarda o setInterval
 let pomodoroType = TIMER_TYPE_POMODORO;
 let timerValue = pomodoroTimerInSeconds
 let multiplierFactor = 360 / timerValue
+
+// Função para transformar segundos em formato MM:SS
+
+function formatNumberInStringMinute(number) {
+
+  const minutes = Math.trunch(number / 60).toString().padStart(2, '0');
+  const seconds = Math.trunch(number % 60).toString().padStart(2, '0');
+
+  return `${minutes}:${seconds}`;
+}
+
+const startTimer = () => {
+  progressInterval = setInterval(() => {
+      timerValue --;
+  }, 1000);
+}
+
+const stopTimer = () => clearInterval(progressInterval);
