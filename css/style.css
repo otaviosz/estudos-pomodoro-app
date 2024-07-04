@@ -9,6 +9,16 @@
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+  transition: all .3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
 :root {
   --yellow: #e49400;
   --green: #2d8515;
